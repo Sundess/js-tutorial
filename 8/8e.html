@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8e</title>
+</head>
+<body>
+    <script>
+        const product = {
+            name: "Basketball",
+            price : 2095,
+        }
+        
+        const product2 = {
+            name: "Basketball",
+            price : 2095,
+        }
+
+        function compareProduct(prod1, prod2) {
+            if (prod1.name === prod2.name && prod1.price === prod2.price){
+                return true;
+            }else{
+                return false
+            }
+        };
+
+        test = compareProduct(product, product2)
+        console.log(test)
+        
+    </script>
+</body>
+</html>

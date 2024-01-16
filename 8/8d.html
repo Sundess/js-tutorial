@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8d</title>
+</head>
+<body>
+    <script>
+       const product = {
+            name: "Basketball",
+            price : 2200,
+        }
+        
+        const product2 = {
+            name: "Basketball",
+            price : 2095,
+        }
+
+        function compareProduct(prod1, prod2) {
+            if (prod1.price > prod2.price){
+                return prod1;
+            }else{
+                return prod2
+            }
+        };
+
+        higher = compareProduct(product, product2)
+        console.log(higher);
+    </script>
+</body>
+</html>

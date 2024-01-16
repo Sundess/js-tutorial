@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9h</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Type something" class="id" onkeyup="typeKeyPressed()">
+    <p class="p"></p>
+
+    <script>
+        function typeKeyPressed() {
+            const inputElement = document.querySelector('.id');
+            document.querySelector('.p').innerHTML = inputElement.value;
+        }
+    </script>
+</body>
+
+</html>
