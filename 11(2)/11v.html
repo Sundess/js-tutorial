@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11v</title>
+</head>
+
+<body>
+    <script>
+        for (let index = 1; index < 20; index++) {
+            let result = ''
+            if (index % 3 === 0) {
+                result += 'Fizz';
+            }
+            if (index % 5 === 0) {
+                result += 'Buzz';
+            }
+
+            console.log(result || index)
+            result = ''
+        }
+    </script>
+</body>
+
+</html>

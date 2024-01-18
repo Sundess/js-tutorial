@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11w</title>
+</head>
+
+<body>
+    <script>
+
+        function unique(array) {
+            let newArray = {};
+            array.forEach(element => {
+                if (!newArray.hasOwnProperty(`${element}`)) {
+                    newArray[`${element}`] = true;
+                }
+            });
+            let resultArray = Object.keys(newArray);
+            console.log(resultArray);
+            return resultArray
+        }
+
+        unique(['red', 'green', 'green', 'red'])
+    </script>
+</body>
+
+</html>
