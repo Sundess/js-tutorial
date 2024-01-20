@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="js-title">12g</title>
+</head>
+
+<body>
+
+    <button onclick="addNotification()">Add</button>
+    <button onclick="decreaseNotifi()">Remove</button>
+
+    <script>
+        let titleElement = document.querySelector('.js-title')
+        let notificaitonCount = 2;
+        let timeId;
+
+        runInterval()
+
+        function runInterval() {
+            if (notificaitonCount > 0) {
+                timeId = setInterval(function () {
+                    if (document.title === '12g') {
+                        document.title = `(${notificaitonCount}) New messages`;
+                    } else {
+                        document.title = '12g';
+                    }
+                }, 1000);
+            } else {
+                clearInterval(timeId)
+                document.title = '12g';
+            }
+        }
+
+        function addNotification() {
+            notificaitonCount += 1;
+            clearInterval(timeId)
+            runInterval()
+        }
+
+        function decreaseNotifi() {
+            if (notificaitonCount === 0) {
+                return
+            } else {
+                notificaitonCount -= 1;
+            }
+            clearInterval(timeId)
+            runInterval()
+        }
+
+
+    </script>
+</body>
+
+</html>

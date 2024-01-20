@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12f</title>
+</head>
+
+<body>
+    <button class="progress-js-btn" onclick="addCart()">
+        Add to Cart
+    </button>
+
+    <p class="pregress-js-indicator"></p>
+
+    <script>
+        let timeoutId;
+        let isShowingStatus = false;
+
+        function addCart() {
+            let indicator = document.querySelector('.pregress-js-indicator');
+
+            indicator.innerHTML = 'Added';
+
+            // First, cancel the previous timeout so that
+            // it doesn't remove the message too quickly.
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(function () {
+                indicator.innerHTML = '';
+            }, 2000);
+
+        }
+    </script>
+</body>
+
+</html>

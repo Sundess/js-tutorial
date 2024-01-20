@@ -25,7 +25,7 @@ function autoplay() {
             playGame(playerMove);
 
         }, 1000);
-
+        
         console.log(intervalId);
         isAutoPlaying = true;
     } else {
